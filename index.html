@@ -1,117 +1,23 @@
-
-<!DOCTYPE HTML>
-<html>
-<head>
-<title>Zhang Bo</title>
-
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
- 	
-<link rel="stylesheet"
-	href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
-
-<style type="text/css">
-body {
-	background-color: #f5f5f5;
-}
-
-.container {
-	padding: 50px;
-}
-
-.social-icon {
-	width: 24px;
-}
-
-.chart {
-	margin: 20px;
-	border-left: 1px solid;
-	border-bottom: 1px solid;
-	border-color: #8d8d8d;
-}
-
-hr {
-	border-color: #5e5e5e;
-}
-
-.about {
-    font-family: monospace;
-}
-
-.json-field {
-    font-weight: bold;
-}
-
-.bar {
-	margin-bottom: 20px;
-	margin-left: 15px;
-}
-
-#php {
-	background-color: #1DA287;
-}
-
-#htmlcss {
-	background-color: #2D7FA9;
-}
-
-#javascript {
-	background-color: #EEC435;
-}
-
-#java {
-	background-color: #E94B3C;
-}
-
-#sql {
-	background-color: #8E6197;
-}
-
-#ruby {
-	background-color: #3498db;
-}
-</style>
-
-</head>
-<body>
-	<br/><br/><br/>
-	<div class="container">
-		<div id="header" class="row">
-			<img class="col-md-4 img-responsive img-rounded"
-				src="img/web-profile-pic-zhangbo.jpg"></img>
-			<div class="col-md-8">
-				<h1>Zhang Bo</h1>
-				<a 
-					title="Linkedin" href="https://www.linkedin.com/in/bo-zhang-0ab018160/"><img
-					class="social-icon" src="img/linkedin.png"></a>  <a
-					title="Github" href="https://github.com/zhangbo222"><img
-					class="social-icon" src="img/github.png"></a>   <a
-					href="mailto:zhangbo890222@gmail.com">zhangbo890222@gmail.com</a>
-				<hr>
-				<p>Hello, My name is Zhang Bo</p>
-				<p>I am a Software Testing Engineer specialist</p>
-				<p>Originally from Jiangsu Province, China</p>
-				<p>Based in Singapore at the moment</p>
-				<hr>
-				<h4>Thanks for reaching out! &#127867;</h4>
-			</div>
-		</div>
-	</div>
+---
+layout: default
+---
 
 
-	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-	<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-		
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+{% include career-profile.html %}
 
-  ga('create', 'UA-41583794-1', 'zhangbo222.github.io');
-  ga('send', 'pageview');
+{% unless site.data.data.sidebar.education %}
+  {% include education.html %}
+{% endunless %}
 
-</script>
-	
-</body>
-</html>
+{% include experiences.html %}
+
+{% include certifications.html %}
+
+{% include projects.html %}
+
+{% include oss-contributions.html %}
+
+{% include publications.html %}
+
+{% include skills.html %}
 
